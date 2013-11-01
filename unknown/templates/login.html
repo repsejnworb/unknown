@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "forms.html" as forms %}
+
+{% block head %}
+<!-- Custom styles for this template -->
+<link href="static/css/signin.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<form class="form-signin" action="" method="post" name="login">
+  <h2 class="form-signin-heading">Please sign in</h2>
+  {{form.hidden_tag()}}
+  {{form.username(size=80, class="form-control", required=true, placeholder="Username", autofocus=true)}}
+  {{form.password(size=80, class="form-control", required=true, placeholder="Password")}}
+  <label class="checkbox">
+    {{form.remember_me}} Remember me
+  </label>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,5 @@
+nose>=1.0
+nose-cov
+coverage>=3.3
+nosexcover>=1.0.7
+nose_extra_tools>=1.0
